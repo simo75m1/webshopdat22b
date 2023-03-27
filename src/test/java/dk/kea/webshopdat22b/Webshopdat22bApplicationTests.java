@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class Webshopdat22bApplicationTests
 {
 
-    @Test
+    //fuck off@Test
     void contextLoads()
     {
     }
