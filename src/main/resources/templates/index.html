@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Produktliste</h1>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Update</th>
+            </thead>
+
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}">42 </td>
+                    <td th:text="${product.name}">Meningen med alting</td>
+                    <td th:text="${product.price}">666</td>
+                    <td>
+                        <a th:href="@{'/update/' + ${product.id}}" href="/update">Opdater</a>
+                    </td>
+                    <td>
+                        <a th:href="@{'/delete/' + ${product.id}}" href="/delete">Slet</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/create">Opret nyt produkt</a>
+    </div>
+</body>
+</html>
